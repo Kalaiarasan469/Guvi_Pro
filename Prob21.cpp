@@ -1,8 +1,7 @@
-#include <iostream>
+include <iostream>
 using namespace std;
-class Anagram
+class Prob21
 {
-string s;
 int n,j,ar[100000],s1,s2;
 void get()
 {
@@ -27,29 +26,34 @@ ar[j]=t;
 }
 }
 }
-for(i=0;i<n/2;i++)
+for(i=0;i<=n/2;i++)
 {
 s1=s1+ar[i];
+if(c==0)
+{
+s2=s2+ar[n-1-i];
+}
+else
+{
+if(i!=n/2)
+{
+s2=s2+ar[n-i-1];
 }
 }
 void display()
 {
-cout<<"OUTPUT"<<endl;
-if(ch)
-{cout<<"yes"<<endl;}
-else
-{cout<<"no"<<endl;}
+cout<<"OUTPUT"<<endl<<s1<<" "<<s2;
 }
 };
 public:
-Anagram()
+Prob21()
 {
     get();
     chck();
     display();
-}
 };
-int main() {
- Anagram a;
-	return 0;
+int main()
+{
+ Prob21 a;
+return 0;
 }
