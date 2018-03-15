@@ -1,8 +1,8 @@
-include <iostream>
+#include <iostream>
 using namespace std;
 class Prob21
 {
-int n,j,ar[100000],s1,s2;
+int n,j,i,ar[100000],s1=0,s2=0,c=0;
 void get()
 {
 cout<<"INPUT"<<endl;
@@ -11,6 +11,8 @@ for(i=0;i<n;i++)
 {
 cin>>ar[i];
 }
+if(n%2)
+{c++;}
 }
 void chck()
 {
@@ -40,17 +42,19 @@ if(i!=n/2)
 s2=s2+ar[n-i-1];
 }
 }
+}
+}
 void display()
 {
 cout<<"OUTPUT"<<endl<<s1<<" "<<s2;
 }
-};
 public:
 Prob21()
 {
     get();
     chck();
     display();
+}
 };
 int main()
 {
